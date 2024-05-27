@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'GetXEasy.dart';
+import 'package:get/get.dart';
 
 class GetXMenu extends StatelessWidget {
   const GetXMenu({super.key});
