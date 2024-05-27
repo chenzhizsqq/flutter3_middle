@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'GetXEasy.dart';
 import 'GetXGetPage.dart';
+import 'GetXDialog.dart';
 import 'package:get/get.dart';
 
 class GetXMenu extends StatelessWidget {
@@ -24,6 +25,13 @@ class GetXMenu extends StatelessWidget {
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const GetXGetPage()));
+          },
+        ),
+        ElevatedButton(
+          child: const Text("GetX Repository and Dialog"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => GetXDialogLoginApp()));
           },
         ),
       ]),
