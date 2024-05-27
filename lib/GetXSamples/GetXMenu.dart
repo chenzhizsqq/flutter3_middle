@@ -4,6 +4,7 @@ import 'GetXGetPage.dart';
 import 'GetXDialog.dart';
 import 'GetXHttpPost.dart';
 import 'GetXValidation.dart';
+import 'GetXThemes.dart';
 import 'package:get/get.dart';
 
 class GetXMenu extends StatelessWidget {
@@ -50,6 +51,14 @@ class GetXMenu extends StatelessWidget {
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => GetXValidation()));
+          },
+        ),
+        //GetXThemes
+        ElevatedButton(
+          child: const Text("GetX Validation Themes:Themes設定"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const GetXThemes()));
           },
         ),
       ]),
