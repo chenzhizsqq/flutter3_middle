@@ -7,14 +7,13 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'firebase_options.dart';
+import 'GetXSamples/GetXMenu.dart';
 
 //void main() => runApp(const MyApp());
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(
     // 为了安装 Riverpod，我们需要将这个小组件添加到所有的小组件之上。
@@ -47,17 +46,24 @@ class SampleMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ホーム"),
+        title: const Text("ホーム"),
       ),
       body: ListView(children: <Widget>[
         ElevatedButton(
-          child: Text("MyHomePage"),
+          child: const Text("MyHomePage"),
           onPressed: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        MyHomePage(title: 'Flutter Demo Home Page')));
+                        const MyHomePage(title: 'Flutter Demo Home Page')));
+          },
+        ),
+        ElevatedButton(
+          child: const Text("GetX Menu"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const GetXMenu()));
           },
         ),
       ]),
@@ -111,7 +117,7 @@ class DialogExample extends StatelessWidget {
           content: const Text('我是AlertDialog对话框'),
           contentPadding: const EdgeInsets.all(40),
           contentTextStyle: const TextStyle(color: Colors.black, fontSize: 16),
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: const Color(0xffffffff),
           elevation: 10.0,
           actionsOverflowDirection: VerticalDirection.down,
           shape: const RoundedRectangleBorder(
