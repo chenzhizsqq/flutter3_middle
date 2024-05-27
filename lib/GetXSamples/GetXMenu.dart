@@ -14,8 +14,8 @@ class GetXMenu extends StatelessWidget {
         ElevatedButton(
           child: const Text("GetX Easy"),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const GetXEasy()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => GetXEasy()));
           },
         ),
       ]),
