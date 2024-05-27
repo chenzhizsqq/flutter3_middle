@@ -8,6 +8,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'firebase_options.dart';
 import 'GetXSamples/GetXMenu.dart';
+import 'package:get/get.dart';
+import 'GetXSamples/GetXDialog.dart';
 
 //void main() => runApp(const MyApp());
 
@@ -15,6 +17,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
+  // 依存性のバインド
+  Get.put(GetXDialogUserRepository());
+  Get.put(GetXDialogLoginController(Get.find<GetXDialogUserRepository>()));
   runApp(
     // 为了安装 Riverpod，我们需要将这个小组件添加到所有的小组件之上。
     // 它不应该在 “MyApp” 内部，而是作为 “runApp” 的直接参数。
