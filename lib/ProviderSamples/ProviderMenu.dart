@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'ProviderTest.dart';
+import 'FR_FutureProviderTest.dart';
 
 class ProviderMenu extends StatelessWidget {
   const ProviderMenu({super.key});
@@ -16,6 +17,16 @@ class ProviderMenu extends StatelessWidget {
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ProviderTest()));
+          },
+        ),
+        //FR_FutureProviderTest
+        ElevatedButton(
+          child: const Text("flutter_riverpod 的例子:FutureProvider Test"),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const FR_FutureProviderTest()));
           },
         ),
       ]),
