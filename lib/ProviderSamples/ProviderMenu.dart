@@ -15,7 +15,7 @@ class ProviderMenu extends StatelessWidget {
           child: const Text("Provider 小Test"),
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProviderTest()));
+                MaterialPageRoute(builder: (context) => const ProviderTest()));
           },
         ),
       ]),
