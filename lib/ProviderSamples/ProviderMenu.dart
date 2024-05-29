@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'ProviderTest.dart';
 
 class ProviderMenu extends StatelessWidget {
   const ProviderMenu({super.key});
@@ -9,7 +10,15 @@ class ProviderMenu extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Provider Menu"),
       ),
-      body: ListView(children: <Widget>[]),
+      body: ListView(children: <Widget>[
+        ElevatedButton(
+          child: const Text("Provider 小Test"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProviderTest()));
+          },
+        ),
+      ]),
     );
   }
 }
