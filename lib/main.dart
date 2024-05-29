@@ -10,6 +10,7 @@ import 'firebase_options.dart';
 import 'GetXSamples/GetXMenu.dart';
 import 'package:get/get.dart';
 import 'GetXSamples/GetXDialog.dart';
+import 'ProviderSamples/ProviderMenu.dart';
 
 //void main() => runApp(const MyApp());
 
@@ -69,6 +70,14 @@ class SampleMenu extends StatelessWidget {
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const GetXMenu()));
+          },
+        ),
+        ElevatedButton(
+          child: const Text(
+              "Provider Menu\nprovider 的使用率更高。provider 是一个非常流行和广泛使用的状态管理库，已经被许多开发者采用并且得到了广泛的认可和支持。"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const ProviderMenu()));
           },
         ),
       ]),
