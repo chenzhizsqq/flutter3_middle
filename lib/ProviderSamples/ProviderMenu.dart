@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'ProviderTest.dart';
 import 'FR_FutureProviderTest.dart';
 import 'FutureTest.dart';
+import 'StreamProviderExample.dart';
 
 class ProviderMenu extends StatelessWidget {
   const ProviderMenu({super.key});
@@ -37,7 +37,16 @@ class ProviderMenu extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const FutureTest()));
           },
         ),
-        //
+        //StreamProviderExample
+        ElevatedButton(
+          child: const Text("Provider 的 实时数据更新 例子:\nStreamProvider Example"),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const StreamProviderExample()));
+          },
+        ),
       ]),
     );
   }
