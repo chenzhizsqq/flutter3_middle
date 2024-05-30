@@ -3,6 +3,7 @@ import 'ProviderTest.dart';
 import 'FR_FutureProviderTest.dart';
 import 'FutureTest.dart';
 import 'StreamProviderExample.dart';
+import 'FR_StreamProviderExample.dart';
 
 class ProviderMenu extends StatelessWidget {
   const ProviderMenu({super.key});
@@ -45,6 +46,17 @@ class ProviderMenu extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const StreamProviderExample()));
+          },
+        ),
+        //FR_StreamProviderExample
+        ElevatedButton(
+          child: const Text(
+              "flutter_riverpod StreamProvider 的 实时数据更新 例子:\nFR_StreamProvider Example"),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const FR_StreamProviderExample()));
           },
         ),
       ]),
