@@ -74,7 +74,7 @@ class SampleMenu extends StatelessWidget {
         ),
         ElevatedButton(
           child: const Text(
-              "Provider Menu\nprovider 的使用率更高。provider 是一个非常流行和广泛使用的状态管理库，已经被许多开发者采用并且得到了广泛的认可和支持。"),
+              "flutter_riverpod和provider的对比\n provider 的使用率更高。provider 是一个非常流行和广泛使用的状态管理库。\n flutter_riverpod是provider的升级版"),
           onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ProviderMenu()));

@@ -21,6 +21,15 @@ class ProviderMenu extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => const ProviderTest()));
           },
         ),
+        const Text(""),
+        const Text("FutureProvider 的对比"),
+        ElevatedButton(
+          child: const Text("Provider 的Json例子:Future Test"),
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const FutureTest()));
+          },
+        ),
         //FR_FutureProviderTest
         ElevatedButton(
           child: const Text("flutter_riverpod 的Json例子:FutureProvider Test"),
@@ -31,13 +40,8 @@ class ProviderMenu extends StatelessWidget {
                     builder: (context) => const FR_FutureProviderTest()));
           },
         ),
-        ElevatedButton(
-          child: const Text("Provider 的Json例子:Future Test"),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const FutureTest()));
-          },
-        ),
+        const Text(""),
+        const Text("StreamProvider的对比"),
         //StreamProviderExample
         ElevatedButton(
           child: const Text("Provider 的 实时数据更新 例子:\nStreamProvider Example"),
@@ -51,7 +55,7 @@ class ProviderMenu extends StatelessWidget {
         //FR_StreamProviderExample
         ElevatedButton(
           child: const Text(
-              "flutter_riverpod StreamProvider 的 实时数据更新 例子:\nFR_StreamProvider Example"),
+              "flutter_riverpod 的 实时数据更新 例子:\nFR_StreamProvider Example"),
           onPressed: () {
             Navigator.push(
                 context,
