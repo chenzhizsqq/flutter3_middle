@@ -34,6 +34,7 @@ class CounterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Provider：通用的提供器，可以用于提供任何类型的对象。
     final counter = Provider.of<int>(context);
 
     return Text(

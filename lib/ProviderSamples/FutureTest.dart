@@ -41,6 +41,7 @@ class FutureTest extends StatelessWidget {
           title: const Text('Future Test'),
         ),
         body: Center(
+          //ChangeNotifierProvider：用于管理 ChangeNotifier 的全局状态。
           child: ChangeNotifierProvider(
             create: (_) => DataModel(),
             child: const MaterialApp(
@@ -56,6 +57,7 @@ class _FutureTest extends StatelessWidget {
   const _FutureTest({super.key});
   @override
   Widget build(BuildContext context) {
+    //Provider：通用的提供器，可以用于提供任何类型的对象。
     final dataModel = Provider.of<DataModel>(context);
 
     return Scaffold(
