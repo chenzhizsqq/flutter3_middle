@@ -1,8 +1,6 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -37,27 +35,29 @@ class MyApp extends StatelessWidget {
       ),
 
       //打开menu
-      home: SampleMenu(),
+      home: const SampleMenu(),
     );
   }
 }
 
 class SampleMenu extends StatelessWidget {
+  const SampleMenu({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("ホーム"),
+        title: const Text("ホーム"),
       ),
       body: ListView(children: <Widget>[
         ElevatedButton(
-          child: Text("MyHomePage"),
+          child: const Text("MyHomePage"),
           onPressed: () {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        MyHomePage(title: 'Flutter Demo Home Page')));
+                        const MyHomePage(title: 'Flutter Demo Home Page')));
           },
         ),
       ]),
@@ -111,7 +111,7 @@ class DialogExample extends StatelessWidget {
           content: const Text('我是AlertDialog对话框'),
           contentPadding: const EdgeInsets.all(40),
           contentTextStyle: const TextStyle(color: Colors.black, fontSize: 16),
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: const Color(0xffffffff),
           elevation: 10.0,
           actionsOverflowDirection: VerticalDirection.down,
           shape: const RoundedRectangleBorder(
