@@ -29,6 +29,9 @@ dependencies:
   riverpod_annotation: ^2.3.3
 
   json_annotation: ^4.8.1
+  
+  #GetX
+  get: ^4.6.5   
 
 dev_dependencies:
   flutter_test:
